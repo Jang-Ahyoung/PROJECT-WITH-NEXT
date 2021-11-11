@@ -1,5 +1,5 @@
 <h1 align="center">  </h2>
-Next 프레임워크를 활용을 위한 프로젝트<br />
+Next 프레임워크 활용을 위한 프로젝트<br />
 
 ## 기술 스택 (front-end)
 
