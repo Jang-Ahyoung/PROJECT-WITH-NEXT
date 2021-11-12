@@ -13,4 +13,17 @@ a {
 
 * {
   box-sizing: border-box;
+  transition: 0.5s;
+}
+
+input {
+  border: none;
+  outline: none;
+  z-index: 10;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
 }

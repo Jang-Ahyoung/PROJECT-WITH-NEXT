@@ -1,0 +1,82 @@
+.container {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 12px;
+  padding: 2rem 1.5rem;
+}
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  border-radius: 50%;
+}
+
+.userName > p {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  padding: 1px 15px;
+}
+
+.rightSide {
+  display: flex;
+  align-items: center;
+}
+.serchBar {
+  padding: 10px 15px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.serchBar:hover {
+  background: #f8f8f8;
+}
+.input {
+  font-size: 15px;
+  background-color: transparent;
+  padding: 0 8px;
+}
+.bellIcon {
+  margin-left: 15px;
+  border: 1px solid #cccccc;
+  padding: 8px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.calendar_bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.cancleBtn,
+.searchBtn {
+  width: 48%;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  background-color: white;
+  box-shadow: rgba(62, 80, 247, 0.1) 0px 4px 12px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
