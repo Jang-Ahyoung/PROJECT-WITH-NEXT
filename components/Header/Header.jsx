@@ -1,13 +1,16 @@
 import styles from './Header.module.css';
 import Image from 'next/image';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import { BsBell } from 'react-icons/bs';
 import { FaSearch } from 'react-icons/fa';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import { DateRangePicker } from 'react-date-range';
+import { format } from 'date-fns';
 
-function Header() {
+function Header({ placeholder }) {
+  const router = useRouter();
   const [input, setInput] = useState('');
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
@@ -20,12 +23,23 @@ function Header() {
     setStartDate(date.selection.startDate);
     setEndDate(date.selection.endDate);
   };
+  const handleSearch = () => {
+    router.push({
+      pathname: '/search',
+      query: {
+        search: input,
+        startDate: format(new Date(startDate), 'dd MMMM yyyy'),
+        endDate: format(new Date(endDate), 'dd MMMM yyyy'),
+      },
+    });
+    setInput('');
+  };
 
   return (
     <div className={styles.container}>
       <header className={styles.header}>
         <div className={styles.userInfo}>
-          <div className={styles.userImage}>
+          <div className={styles.userImage} onClick={() => router.push('/')}>
             <Image
               src="http://img.danawa.com/prod_img/500000/242/761/img/6761242_1.jpg?shrink=500:500&_v=20200221135725"
               width="50px"
@@ -46,9 +60,10 @@ function Header() {
               className={styles.input}
               type="text"
               value={input}
+              placeholder={placeholder}
               onChange={(e) => setInput(e.target.value)}
             />
-            <FaSearch />
+            <FaSearch className={styles.serchIcon} />
           </div>
           <div className={styles.bellIcon}>
             <BsBell />
@@ -67,7 +82,9 @@ function Header() {
               <button className={styles.cancleBtn} onClick={() => setInput('')}>
                 취소
               </button>
-              <button className={styles.searchBtn}>확인</button>
+              <button className={styles.searchBtn} onClick={handleSearch}>
+                확인
+              </button>
             </div>
           </div>
         </div>
