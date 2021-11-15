@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import Header from '../../components/Header/Header';
+import Header from '../components/Header/Header';
 
 function Search() {
   const router = useRouter();
