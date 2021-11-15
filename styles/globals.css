@@ -11,9 +11,13 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 5px;
+}
+
 * {
   box-sizing: border-box;
-  transition: 0.5s;
+  transition: 0.25s;
 }
 
 input {

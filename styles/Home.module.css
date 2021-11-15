@@ -1,0 +1,21 @@
+.container {
+  margin: auto;
+}
+
+.section {
+  margin: 5%;
+}
+.search {
+  margin: 30px 5%;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    display: flex;
+    margin: 0;
+  }
+  .leftSide {
+    width: 50vw;
+    padding: 0 2%;
+  }
+}
