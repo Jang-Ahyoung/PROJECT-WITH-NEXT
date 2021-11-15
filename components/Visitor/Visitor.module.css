@@ -1,0 +1,56 @@
+.container {
+  padding-top: 20px;
+}
+
+.guestbook {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 50px;
+  margin-bottom: 15px;
+}
+
+.gusetImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.guestInfo {
+  width: 100%;
+}
+.InfoTop {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 10px;
+  margin: 0;
+}
+
+.name {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.date {
+  font-size: 13px;
+  color: gray;
+  margin-bottom: 0;
+}
+
+.text {
+  font-size: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding-top: 0;
+  }
+  .guestbook {
+    width: 95%;
+  }
+}
