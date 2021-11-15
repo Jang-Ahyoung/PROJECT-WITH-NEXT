@@ -1,0 +1,118 @@
+.cameraSection {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.previewImage {
+  position: absolute;
+  width: 25%;
+  left: 3%;
+  top: 3%;
+  border-radius: 15px;
+  animation: imageUp 1s;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+@keyframes imageUp {
+  from {
+    transform: translateY(10px);
+  }
+}
+
+.date {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: 10px 0;
+  padding: 5px;
+  color: white;
+  letter-spacing: 1px;
+  line-height: 15px;
+  border-radius: 5px;
+  z-index: 100;
+  right: 3%;
+  top: 2%;
+}
+.visitedText {
+  font-size: 14px;
+}
+.visitedDate {
+  font-size: 11px;
+}
+
+.inputContainer {
+  position: absolute;
+  bottom: 13%;
+  padding: 8px;
+  border-radius: 8px;
+  width: 90%;
+  letter-spacing: 2px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.inputText,
+.inputName {
+  padding: 5px;
+  font-size: 13px;
+  width: 170px;
+  background-color: transparent;
+  border-bottom: 1.5px solid black;
+  color: white;
+  letter-spacing: 2px;
+}
+.inputText {
+  width: 98%;
+  margin: 10px 1%;
+  font-size: 20px;
+}
+.writerInfo {
+  display: flex;
+  align-items: center;
+}
+.writerImage {
+  width: 30px;
+  height: 30px;
+  margin-right: 2%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.camera {
+  border-radius: 30px;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  background: linear-gradient(to right, #45a247, #283c86);
+}
+
+.camera:hover {
+  letter-spacing: 5px;
+}
+
+.captureIcon {
+  position: absolute;
+  font-size: 30px;
+  cursor: pointer;
+  bottom: 3%;
+}
+.captureIcon:hover {
+  font-size: 35px;
+  transform: translateY(-5px);
+}
