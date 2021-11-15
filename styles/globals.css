@@ -27,3 +27,7 @@ button {
   outline: none;
   cursor: pointer;
 }
+
+.progressBar {
+  z-index: 50;
+}
