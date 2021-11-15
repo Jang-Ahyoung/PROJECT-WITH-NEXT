@@ -28,8 +28,8 @@ function Header({ placeholder }) {
       pathname: '/search',
       query: {
         search: input,
-        startDate: format(new Date(startDate), 'dd MMMM yyyy'),
-        endDate: format(new Date(endDate), 'dd MMMM yyyy'),
+        startDate: format(new Date(startDate), 'yyyy년 MM년 dd일'),
+        endDate: format(new Date(endDate), 'yyyy년 MM년 dd일'),
       },
     });
     setInput('');
