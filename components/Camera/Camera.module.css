@@ -11,7 +11,7 @@
 .previewImage {
   position: absolute;
   width: 25%;
-  left: 3%;
+  right: 3%;
   top: 3%;
   border-radius: 15px;
   animation: imageUp 1s;
@@ -36,7 +36,7 @@
   line-height: 15px;
   border-radius: 5px;
   z-index: 100;
-  right: 3%;
+  left: 3%;
   top: 2%;
 }
 .visitedText {
@@ -48,6 +48,7 @@
 
 .inputContainer {
   position: absolute;
+  z-index: 50;
   bottom: 13%;
   padding: 8px;
   border-radius: 8px;
@@ -72,6 +73,10 @@
   margin: 10px 1%;
   font-size: 20px;
 }
+.inputText::placeholder,
+.inputName::placeholder {
+  color: rgb(209, 209, 209);
+}
 .writerInfo {
   display: flex;
   align-items: center;
@@ -92,14 +97,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   color: white;
   letter-spacing: 2px;
+  line-height: 30px;
   font-size: 1.2rem;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
-    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
-    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  animation: imageUp 1s 3 alternate;
+}
+
+.background {
+  animation: imageUp 1s;
   background: linear-gradient(to right, #45a247, #283c86);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .camera:hover {
@@ -115,4 +127,21 @@
 .captureIcon:hover {
   font-size: 35px;
   transform: translateY(-5px);
+}
+
+.guideText {
+  position: absolute;
+  bottom: 10.5%;
+  line-height: 20px;
+  text-align: center;
+  animation: imageUp 0.7s alternate infinite;
+  color: #f1e9e9;
+}
+
+.loadingIcon {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  animation: imageUp 0.7s alternate infinite;
+  font-size: 50px;
 }
