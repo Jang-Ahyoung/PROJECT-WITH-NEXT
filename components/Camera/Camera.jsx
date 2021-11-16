@@ -5,7 +5,7 @@ import { BsCamera } from 'react-icons/bs';
 import { format } from 'date-fns';
 
 const videoContraints = {
-  facingMode: 'user', // 전면 카메라 모드
+  facingMode: 'user',
 };
 
 const LoadingScreen = () => <div className={styles.loadingIcon}>❤</div>;
@@ -16,6 +16,25 @@ function Camera() {
   const [isLoading, setIsLoading] = useState(false);
   const [date, setDate] = useState(null);
   const [camera, setCamera] = useState(false);
+  const [guestName, setGusetName] = useState('');
+  const emotion = [
+    '깜찍한',
+    '경이로운',
+    '좋아하는',
+    '달달한',
+    '소중한',
+    '아픈',
+    '반쯤 남은',
+  ];
+  const name = [
+    '손수건',
+    '춘식',
+    '립글로즈',
+    '무선 마우스',
+    '나침반',
+    '모자',
+    '아메리카노',
+  ];
 
   const handleCamera = () => {
     setCamera(true);
@@ -30,6 +49,14 @@ function Camera() {
     setImage(imageSrc);
     setDate(format(new Date(), 'yyyy년 MM월 dd일 HH:mm'));
   }, [webcamRef]);
+
+  const MakeRandomName = () => {
+    setGusetName(
+      emotion[Math.floor(Math.random() * emotion.length)] +
+        ' ' +
+        name[Math.floor(Math.random() * name.length)]
+    );
+  };
 
   return (
     <div className={styles.container}>
@@ -58,7 +85,21 @@ function Camera() {
                         <input
                           className={styles.inputName}
                           placeholder="Enter Your Name 🌝"
+                          onChange={(e) => setGusetName(e.target.value)}
+                          value={guestName || ''}
                         />
+                        {guestName ? (
+                          <div className={styles.redo} onClick={MakeRandomName}>
+                            ↻
+                          </div>
+                        ) : (
+                          <button
+                            className={styles.randomBtn}
+                            onClick={MakeRandomName}
+                          >
+                            랜덤 생성
+                          </button>
+                        )}
                       </div>
                     </div>
                   </>

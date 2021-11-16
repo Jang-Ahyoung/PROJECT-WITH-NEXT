@@ -67,11 +67,13 @@
   border-bottom: 1.5px solid black;
   color: white;
   letter-spacing: 2px;
+  padding-right: 20px;
 }
 .inputText {
   width: 98%;
   margin: 10px 1%;
   font-size: 20px;
+  padding-right: 0px;
 }
 .inputText::placeholder,
 .inputName::placeholder {
@@ -88,7 +90,21 @@
   border-radius: 50%;
   object-fit: cover;
 }
-
+.randomBtn {
+  border-radius: 15px;
+  padding: 6px 10px;
+  font-size: 12px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+.redo {
+  font-size: 15px;
+  transform: translateX(-15px);
+  z-index: 50;
+  user-select: none;
+  cursor: pointer;
+}
 .camera {
   border-radius: 30px;
   object-fit: cover;
@@ -102,11 +118,11 @@
   letter-spacing: 2px;
   line-height: 30px;
   font-size: 1.2rem;
-  cursor: pointer;
   animation: imageUp 1s 3 alternate;
 }
 
 .background {
+  cursor: pointer;
   animation: imageUp 1s;
   background: linear-gradient(to right, #45a247, #283c86);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -142,6 +158,6 @@
   height: 100%;
   display: flex;
   align-items: center;
-  animation: imageUp 0.7s alternate infinite;
   font-size: 50px;
+  animation: imageUp 0.7s alternate infinite;
 }
